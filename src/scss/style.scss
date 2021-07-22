@@ -1,0 +1,17 @@
+// Variáveis
+$cor: red;
+
+html {
+    background-color: $cor;
+
+   
+}
+
+h2 {
+    color: yellow;
+
+}
+
+@import 'header';
+@import 'home';
+// @import 'footer';
