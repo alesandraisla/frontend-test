@@ -1,15 +1,15 @@
 
 .header {
-    background-color: rgba(241,242,250,255);
+    // background-color: #f1f2fa;
+    // background-color: rgba(241,242,250,255);
+    background-color: #d9dae1;
     width: 100%;
     display: flex;
     flex-direction: row;
 }
 
 
-nav {
-    background-color: #ffffff;
-}
+
 
 .logo {
     width: 100px;
@@ -22,9 +22,18 @@ nav {
     flex-direction: row;
     justify-content:space-between;
     .group-icons {
+    // flex-grow: 2;
     margin-left: 0px;
     padding-right: 0px;
     margin-top: 12px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: white;
+    a {
+        text-decoration: none;
+        color: #646466;
+    }
+}
     }
     .icons {
         background-color: #ffffff;
@@ -34,10 +43,39 @@ nav {
     }
 
     .icon-login {
-        margin-right: 6%;
+        // margin-right: 6%;
+        // padding-right: 10px;
+        font-weight: bold;
+        margin-right: 60px;
+        margin-top: 10px;
     }
+
+.icon-play {
+    flex-grow: 2;
+    margin-top: 10px;
+    // margin-top: 10px;
 }
 
+a .fa-user {
+    margin-right: 5px;
+}
+.fa-search {
+    margin-left: 10px;
+}
+
+.fa-2x {
+    font-size: 1.4em;
+}
+
+.fa-universal-access {
+    color: #646466;
+    // background-color: white;
+}
+
+.fa-adjust {
+    color: #646466;
+    // background-color: gray;
+}
 
 
 

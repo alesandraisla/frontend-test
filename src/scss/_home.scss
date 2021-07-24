@@ -1,6 +1,39 @@
-html {
-    background-color: #fafaff;
+//INÍCIO NAV
+nav {
+    background-color: #ffffff;
+    height: 40px;
+    box-shadow: 0 3px 9px 0 #dddde2;
+    margin-bottom: 20px;
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: row nowrap;
+        // justify-content: space-between;
+        li {
+          flex-grow: 1;
+          text-align: center;
+          margin-top: 10px;
+          list-style: none;
+          font-weight: 600;
+          margin-bottom: 10px;
+        
+        }
+        a {
+            text-decoration: none;
+            color: #646466;
+        }
+        a:hover, a:active {
+            color:#f35c58;
+        }
+        li:hover, li:active {
+            border-bottom: 4px solid #f35c58;
+
+        }
+    }
 }
+
+
+// FIM NAV
 
 // INÍCIO DO BANNER
 

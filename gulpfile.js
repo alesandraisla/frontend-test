@@ -20,10 +20,10 @@ gulp.task('js', gulp.series( function() {
 // jquery , bootstrap, slick 
 gulp.task('vendor-js', gulp.series( function() {
     return gulp.src([
+        './node_modules/@fortawesome/awesome/js/fontawesome.js',
         './node_modules/jquery/dist/jquery.js',
         // './node_modules/bootstrap/js/dist/*.js', 
-        './node_modules/slick-carousel/slick/slick.js'
-        
+        './node_modules/slick-carousel/slick/slick.js',
     ]) //ler 
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('dist/js')); // gravar 
@@ -44,10 +44,18 @@ gulp.task('fonts', gulp.series( function() {
     .pipe(gulp.dest('dist/fonts'));
 }))
 
+gulp.task('fonts-awesome', gulp.series( function() {
+    return gulp.src(['node_modules/@fortawesome/awesome/webfonts/*'])
+    .pipe(gulp.dest('dist/webfonts'));
+}))
+
+
+
 
 gulp.task('sass', gulp.series( function() {
     return gulp.src([
         // 'node_modules/bootstrap/scss/*.scss',
+        'node_modules/@fortawesome/awesome/css/all.css',
         'node_modules/slick-carousel/slick/slick.scss',
         'node_modules/slick-carousel/slick/slick-theme.scss',
         'src/scss/*.scss',
@@ -62,7 +70,7 @@ gulp.task('sass', gulp.series( function() {
 // copiar index,img
 
 // Static server
-gulp.task('serve', gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fonts', function() {
+gulp.task('serve', gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fonts', 'fonts-awesome', function() {
     browserSync.init({
         server: "./dist"
     });
@@ -74,4 +82,4 @@ gulp.task('serve', gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fon
 }));
 
 // gulp.task('build', ['sass', 'vendor-js', 'js', 'html'])
-gulp.task('default',gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fonts'))
+gulp.task('default',gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fonts', 'fonts-awesome',))

@@ -1,5 +1,5 @@
 // Variáveis
-$cor: red;
+$cor: #f1f2fa;
 
 * {
     font-family: "Roboto";
@@ -7,13 +7,16 @@ $cor: red;
 
 html {
     background-color: $cor;
-
-   
 }
 
 h2 {
     color: yellow;
 
+}
+
+body {
+    margin: 0;
+    background-color: #ffffff;
 }
 
 @import 'header';
