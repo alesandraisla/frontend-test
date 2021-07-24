@@ -1,22 +1,36 @@
 // Variáveis
-$cor: #f1f2fa;
+// $cor: #f1f2fa;
 
 * {
     font-family: "Roboto";
 }
 
-html {
-    background-color: $cor;
-}
+// html {
+//     background-color: $cor;
+// }
 
 h2 {
     color: yellow;
 
 }
+ a{
+    text-decoration: none;
+ }
+
+header {
+    background-color: #f1f2fa;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
 
 body {
     margin: 0;
-    background-color: #ffffff;
+    // background-color: #ffffff;
+}
+
+footer {
+    display: flex;
+    flex-direction: row
 }
 
 @import 'header';
