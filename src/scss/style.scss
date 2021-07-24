@@ -1,6 +1,10 @@
 // Variáveis
 $cor: red;
 
+* {
+    font-family: "Roboto";
+}
+
 html {
     background-color: $cor;
 

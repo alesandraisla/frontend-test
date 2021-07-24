@@ -1,3 +1,155 @@
 html {
-    background-color: blue;
+    background-color: #fafaff;
 }
+
+// INÍCIO DO BANNER
+
+#banner {
+    width: 90%;
+    margin: 0 auto ;
+
+    .slick-slide {
+        margin: 10px;
+    }
+
+    .slick-center img {
+        -moz-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+        -o-transform: scale(1.08);
+        -webkit-transform: scale(1.08);
+        color: #e67e22;
+        opacity: 1;
+        transform: scale(1.11);
+    }
+    img {
+        opacity: 0.95;
+        transition: all 300ms ease;
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+    }
+
+
+    .slick-prev {
+        z-index: 1;
+        border-radius: 50%;
+        width: 29px;
+        height: 29px;
+        left: 40px;
+    }
+    
+    .slick-next {
+        right: 40px;
+        border-radius: 50%;
+        width: 29px;
+        height: 29px;
+    }
+    .slick-prev, .slick-next {
+        position: absolute;
+        display: block;
+        height: 20px;
+        width: 20px;
+        line-height: 0px;
+        font-size: 0px;
+        cursor: pointer;
+        background: black;
+        color: transparent;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+}
+
+.slick-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "-";
+    width: 37px;
+    height: 20px;
+    font-family: "slick";
+    font-size: 57px;
+    line-height: 20px;
+    text-align: center;
+    color: black;
+    opacity: 0.25;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #f35c58;
+    opacity: 0.75;
+}
+
+@media screen and (min-width: 1200px) {
+    #banner {
+    .slick-slide {
+        margin: 21px !important;
+    }
+}
+}
+
+// FIM DO BANNER
+
+// INÍCIO CARDS
+
+// .container-cards {
+   
+// }
+.desenho {
+   
+}
+
+.container-cards {
+    margin-left: 20px;
+
+    .slick-slide {
+        margin: 5px!important;
+    }
+
+    .slick-prev {
+        left: -25px;
+        border-radius: 0 150px 150px 0;
+        width: 20px;
+        height: 45px;
+        background-color: #43494b;
+    }
+    .slick-next {
+        right: -25px;
+        width: 20px;
+        height: 45px;
+        background-color: #43494b;
+        border-radius: 150px 0 0 150px;
+    }
+    .slick-disabled {
+        background-color: #e4e4ea;
+    }
+    .card {
+        position: relative;
+        // width:0 !important;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .desenho {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    }
+}
+
+
+
+// .slick-slide img {
+//     border-radius: 5px;
+//     display: block;
+// }
+
+
+// FIM CARD

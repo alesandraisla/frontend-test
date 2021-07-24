@@ -47,9 +47,9 @@ gulp.task('fonts', gulp.series( function() {
 
 gulp.task('sass', gulp.series( function() {
     return gulp.src([
-        'node_modules/bootstrap/scss/*.scss',
-        'node_modules/slick-carousel/slick/slick-theme.scss',
+        // 'node_modules/bootstrap/scss/*.scss',
         'node_modules/slick-carousel/slick/slick.scss',
+        'node_modules/slick-carousel/slick/slick-theme.scss',
         'src/scss/*.scss',
     ]) //ler 
     .pipe(sass()) // converter o Sass em CSS
@@ -70,7 +70,7 @@ gulp.task('serve', gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fon
     gulp.watch("src/scss/*.scss", gulp.series(['sass']));
     gulp.watch("src/js/*.js", gulp.series(['js']));
     gulp.watch("src/images/*.images", gulp.series(['images']));
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/index.html", gulp.series(['html'])).on('change', browserSync.reload);
 }));
 
 // gulp.task('build', ['sass', 'vendor-js', 'js', 'html'])
