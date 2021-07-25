@@ -1,0 +1,207 @@
+@import 'variables';
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+
+        
+    a, h3,  .font-special-block-1,  .font-special-block-2, .primer-block {
+        color: $text-primary;
+        font-size: 13px;
+    }
+
+    li {
+        list-style: none;
+        padding-bottom: 8px;
+    }
+
+    h3 {
+        margin-left: 38px;
+    }
+
+    .row1-footer {
+        background-color: $background-secondary;
+        border: 1px solid #dfe0e7;
+        .logo-rodape {
+            // color: #606064;
+            width: 100px;
+            margin-left: 30px;
+            filter: grayscale(100%);
+            opacity: 0.8;
+            margin: 20px 20px;
+
+        }
+        .itens-footer {
+            display: flex;
+            justify-content: space-between;
+            // margin-top: 20px;
+        }
+        .icons-footer {
+            margin-right: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                margin-right: 20px;
+            }
+        }
+        .fa-facebook-f, .fa-twitter, .fa-youtube, .fa-instagram {
+            font-size: 20px;
+            color: #606064;
+        }
+    
+    }
+
+    .row2-footer {
+        display:block;
+        background-color: $background-secondary;
+        border-top: 1px solid #dfe0e7;
+    }
+        
+    .column1-footer{
+        background-color: $background-secondary;
+        display: flex;
+        flex-direction: column;
+        img {
+        width: 50px;
+        border-radius: 9px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        }
+        .font-special-block-1 {
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    
+    }
+
+    .app-sky {
+        display: flex;
+    
+    }
+    .list-app-sky {
+        //  margin: 20px;
+        width: 180px;
+        margin-top: 10px;
+    }
+
+    .link-apple {
+        margin-left: 0px;
+        // top: 20px;
+        font-size: 20px;
+        margin-left: 10px;
+        border-radius: 38px;
+        width: 25px;
+        border: 2px solid #606064;
+        height: 25px;
+        /* padding: 0px 2px 0 0; */
+        position: relative;
+        top: 3px;
+    }
+
+
+    .fa-apple {
+        font-size: 20px;
+        position: absolute;
+        left: 6px;
+        top: 2px;
+    
+    }
+
+    .fa-google-play {
+        font-size: 17px;
+        position: absolute;
+        left: 6px;
+        top: 3px;
+
+    }
+
+    .primer-block {
+        margin-left: 10px;
+        font-size: 10px;
+        
+    
+    }
+
+    .font-special-block-2{
+        font-weight: bold;
+        // margin-top: 20px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+
+    .app-apple {
+        display: flex;
+        margin-left: 70px;
+        margin-bottom: 10px;
+    }
+
+
+    @media screen and (min-width:600px) {
+        .row2-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    // SEGUNDA COLUNA
+
+    .column2-footer {
+        background-color: $background-secondary;
+        display: flex;
+        // flex-direction: column;
+        // margin-left: -6rem;
+        
+    }
+
+    .column2-footer div {
+        // margin-left: 40rem;
+    }
+
+    .column1-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .column3-footer {
+        margin-right: 8rem;
+    }
+
+    .company {
+        margin-top: 38px;
+    }
+
+    //  TERCEIRA LINHA 
+
+    .row3-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .links {
+        ul li {
+            display: inline-block;
+        }
+        a {
+            margin-right: 10px;
+        margin-left: 10px;
+        }
+    }
+
+    // QUARTA LINHA
+
+    .row4-footer {
+        display: flex;
+        background-color: $background-secondary;
+        // justify-content: space-around;
+        div {
+            margin: 20px 0 20px 20px;
+        }
+
+    }
+}

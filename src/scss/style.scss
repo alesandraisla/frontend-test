@@ -1,5 +1,6 @@
 // Variáveis
 // $cor: #f1f2fa;
+@import 'variables';
 
 * {
     font-family: "Roboto";
@@ -9,30 +10,23 @@
 //     background-color: $cor;
 // }
 
-h2 {
-    color: yellow;
 
-}
  a{
     text-decoration: none;
  }
 
 header {
-    background-color: #f1f2fa;
+    background-color: $background-primary;
         padding-bottom: 10px;
         padding-top: 10px;
     }
 
 body {
     margin: 0;
-    // background-color: #ffffff;
 }
 
-footer {
-    display: flex;
-    flex-direction: row
-}
+
 
 @import 'header';
 @import 'home';
-// @import 'footer';
+@import 'footer';
