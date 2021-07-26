@@ -237,94 +237,93 @@ footer {
             color: #606064;
         }
     }    
-}
 
-//ACORDEÃO 
+    //ACCORDION 
 
-.accordion-button:not(.collapsed) {
-    color: $text-primary; 
-    background-color: $background-primary;
-}
+    .accordion-button:not(.collapsed) {
+        color: $text-primary; 
+        background-color: $background-primary;
+    }
 
-.accordion-button:focus {
-    z-index: 3;
-    border-color: transparent !important;
-    outline: 0;
-    box-shadow: none;
-}
+    .accordion-button:focus {
+        z-index: 3;
+        border-color: transparent !important;
+        outline: 0;
+        box-shadow: none;
+    }
 
-.accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
 
-.accordion-body {
-    padding-left: 0px;
-    padding-right: 0px;
-    background-color: $background-primary;
-    ul {
-        padding-left: 0;
+    .accordion-body {
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: $background-primary;
+        ul {
+            padding-left: 0;
+            font-weight: 600;
+        }
+    }
+
+    .accordion {
+    margin-left: 20px;
+    }
+
+    .accordion-item {
+        border: none !important;
+        border-top: 2px solid rgba(0, 0, 0, 0.125) !important;
+        border-radius: 0 !important;
+    }
+
+    .accordion-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        color: $text-secondary !important;
         font-weight: 600;
+        text-align: left;
+        background-color: $background-primary;
+        border: 0;
+        border-radius: 0;
+        overflow-anchor: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+        box-shadow: none;
+        padding-left: 0px;
     }
-}
 
-.accordion {
-  margin-left: 20px;
-}
+    .accordion-button:not(.collapsed) {
+        box-shadow: none !important;
+    }
 
-.accordion-item {
-    border: none !important;
-    border-top: 2px solid rgba(0, 0, 0, 0.125) !important;
-    border-radius: 0 !important;
-}
-
-.accordion-button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 1.25rem;
-    font-size: 1rem;
-    color: $text-secondary !important;
-    font-weight: 600;
-    text-align: left;
-    background-color: $background-primary;
-    border: 0;
-    border-radius: 0;
-    overflow-anchor: none;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-    box-shadow: none;
-    padding-left: 0px;
-}
-
-.accordion-button:not(.collapsed) {
-    box-shadow: none !important;
-}
-
-.accordion-header-one {
-    border-top: 2px solid rgba(0, 0, 0, 0.125) !important;
-    font-size: 14px;
-    color: $text-secondary;
-    font-size: 1rem;
-    padding-top: 12px;
-    margin-bottom: 20px;
-}
-
-// RESPONSIVIDADE
-
-@media screen and (max-width: 680px) {
-    .app-sky .font-special-block-1 {
-        color: $primary;
+    .accordion-header-one {
+        border-top: 2px solid rgba(0, 0, 0, 0.125) !important;
         font-size: 14px;
+        color: $text-secondary;
+        font-size: 1rem;
+        padding-top: 12px;
+        margin-bottom: 20px;
     }
-    .font-special-block-1 {
-        margin-top: 13px !important;
-    }
-    .row4-footer .text-footer {
-        text-align: center;
-        margin-left: 12px;
-    }
-    .font-cards {
-        margin-top: 50px;
+
+    // RESPONSIVIDADE
+
+    @media screen and (max-width: 680px) {
+        .app-sky .font-special-block-1 {
+            color: $primary;
+            font-size: 14px;
+        }
+        .font-special-block-1 {
+            margin-top: 13px !important;
+        }
+        .row4-footer .text-footer {
+            text-align: center;
+            margin-left: 12px;
+        }
+        .font-cards {
+            margin-top: 50px;
+        }
     }
 }
-
