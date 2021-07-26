@@ -27376,6 +27376,10 @@ header nav {
   margin-bottom: 0px;
 }
 
+.p-3 {
+  background-color: #f1f2fa !important;
+}
+
 .navbar-dark .navbar-toggler {
   color: red;
   border-color: red;
@@ -27433,6 +27437,7 @@ nav .navigation {
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: #ffffff !important;
 }
 nav .navigation li {
   flex-grow: 1;
@@ -27679,6 +27684,7 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #f1f2fa;
+  margin-top: 20px;
 }
 footer a, footer h3, footer .font-special-block-1, footer .font-special-block-2, footer .primer-block {
   color: #646466;
@@ -27943,6 +27949,7 @@ footer .row4-footer .text-footer {
   color: black;
   font-size: 1rem;
   padding-top: 12px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 680px) {
