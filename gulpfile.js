@@ -22,9 +22,9 @@ gulp.task('vendor-js', gulp.series( function() {
     return gulp.src([
         './node_modules/@fortawesome/awesome/js/fontawesome.js',
         './node_modules/jquery/dist/jquery.js',
-        // './node_modules/bootstrap/js/dist/*.js', 
+        './node_modules/bootstrap/dist/js/bootstrap.js', 
         './node_modules/slick-carousel/slick/slick.js',
-    ]) //ler 
+    ]) 
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('dist/js')); // gravar 
 }));
@@ -54,7 +54,7 @@ gulp.task('fonts-awesome', gulp.series( function() {
 
 gulp.task('sass', gulp.series( function() {
     return gulp.src([
-        // 'node_modules/bootstrap/scss/*.scss',
+        'node_modules/bootstrap/scss/*.scss',
         'node_modules/@fortawesome/awesome/css/all.css',
         'node_modules/slick-carousel/slick/slick.scss',
         'node_modules/slick-carousel/slick/slick-theme.scss',

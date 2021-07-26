@@ -2,9 +2,13 @@
 
 
 //INÍCIO NAV
+
+a {
+    text-decoration: none;
+ }
+
 nav {
     background-color: $background-secondary;
-    // height: 40px;
     box-shadow: 0 3px 9px 0 #dddde2;
     margin-bottom: 20px;
     .navigation {
@@ -14,12 +18,11 @@ nav {
         padding: 0;
         margin: 0;
         li {
-          flex-grow: 1;
-          text-align: center;
-          list-style: none;
-          font-weight: 600;
-        //   padding: 8px;
-          padding: 14px;
+            flex-grow: 1;
+            text-align: center;
+            list-style: none;
+            font-weight: 600;
+            padding: 14px;
         }
         a {
             text-decoration: none;
@@ -27,32 +30,24 @@ nav {
             width: 100%;
             display: inline-block;
         }
-        
         li:hover, li.active {
-           border-bottom: 4px solid $primary;
-           padding-bottom: 4px;
-           a {
+            border-bottom: 4px solid $primary;
+            padding-bottom: 4px;
+            a {
             color: $primary;
-        }
+            }
         }
     }
 }
-
-
-
-
-// FIM NAV
 
 // INÍCIO DO BANNER
 
 #banner {
     width: 90%;
     margin: 0 auto ;
-
     .slick-slide {
         margin: 10px;
     }
-
     .slick-center img {
         -moz-transform: scale(1.08);
         -ms-transform: scale(1.08);
@@ -68,9 +63,8 @@ nav {
         display: block;
         width: 100%;
         border-radius: 10px;
+        box-shadow: 0 3px 9px 0 #dddde2;
     }
-
-
     .slick-prev {
         z-index: 1;
         border-radius: 50%;
@@ -78,7 +72,6 @@ nav {
         height: 29px;
         left: 40px;
     }
-    
     .slick-next {
         right: 40px;
         border-radius: 50%;
@@ -88,8 +81,8 @@ nav {
     .slick-prev, .slick-next {
         position: absolute;
         display: block;
-        height: 20px;
-        width: 20px;
+        height: 44px;
+        width: 44px;
         line-height: 0px;
         font-size: 0px;
         cursor: pointer;
@@ -102,7 +95,12 @@ nav {
         padding: 0;
         border: none;
         outline: none;
+        background: rgba(0, 0, 0, 0.5);
     }
+}
+
+.slick-dots {
+    bottom: -6px;
 }
 
 .slick-dots li button:before {
@@ -127,39 +125,50 @@ nav {
     opacity: 0.75;
 }
 
+.slick-next:before {
+    content: "";
+}
+
+.slick-prev:before {
+    content: "";
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+}
+
 @media screen and (min-width: 1200px) {
     #banner {
-    .slick-slide {
-        margin: 21px !important;
-    }
+        .slick-slide {
+            margin: 21px !important;
+        }
     }
 }
 @media screen and (max-width: 600px) {
     .slick-dots {
         display: none;
     }
-
 }
-
-// FIM DO BANNER
 
 // INÍCIO CARDS
 
-// .container-cards {
-   
-// }
-
 .font-cards {
-    color: #646466;
+    margin-left: 25px;
+    font-size: 1.2rem;
+    color: $text-secondary;
+    padding-top: 20px;
 }
 
 .container-cards {
     margin-left: 20px;
-
     .slick-slide {
         margin: 5px!important;
     }
-
     .slick-prev, .slick-next {
         width: 40px;
         height: 85px;
@@ -175,7 +184,6 @@ nav {
             background-color: #e4e4ea;
         }
     }
-
     .slick-prev {
         left: -20px;
         border-radius: 0 150px 150px 0;
@@ -183,7 +191,6 @@ nav {
             content: '\f053';
         }
     }
-
     .slick-next {
         right: 0;
         border-radius: 150px 0 0 150px;
@@ -191,49 +198,66 @@ nav {
             content: '\f054';
         }
     }
-
-    
-
     .card {
         position: relative;
-        // width:0 !important;
+        border: none;
         img {
             width: 100%;
             border-radius: 5px;
+            box-shadow: 0 3px 9px 0 #dddde2;
         }
         .icon-card {
             position: absolute;
             top: 10px;
             right: 10px;
-            border:4px solid #ffffff;
-            width: 28px;
-            height: 28px;
+            border:2px solid #ffffff;
+            width: 32px;
+            height: 32px;
             border-radius: 128px;
             background: rgba(0,0,0,0.4);
             .fa-lock {
                 color:#ffffff;
-                padding-left: 0px;
-                padding-top: 0px;
-                margin-left: 8px;
-                margin-top: 5px;
+                padding-left: 7px;
+                padding-top: 5px;
             }
             .fa-shopping-cart {
                 color:#ffffff;
-                padding-left: 0px;
-                padding-top: 0px;
-                margin-left: 6px;
-                margin-top: 7px;
+                padding-left: 4px;
+                padding-top: 6px;
             }
         }
     }
 }
 
+.slick-dots li button:hover:before {
+    color: $primary;
+}
 
+@media screen and (max-width: 1024px) {
+    .slick-dots {
+        display: none !important;
+    }
+}
 
-// .slick-slide img {
-//     border-radius: 5px;
-//     display: block;
-// }
-
-
-// FIM CARD
+@media screen and (max-width: 680px) {
+    button .container-cards .slick-prev.slick-disabled, .container-cards .slick-next.slick-disabled {
+        background-color: transparent !important;
+    }
+    .container-cards .slick-prev, .container-cards .slick-next {
+        background-color: transparent !important;
+    }
+    .container-cards .slick-prev::before, .container-cards .slick-next::before {
+        font-size: 20px;
+        font-family: "Font Awesome 5 Free";
+        color: transparent !important;
+        font-weight: bold;
+    }
+    .header-sky .icon-access {
+        margin-left: 2px !important;
+        margin-right: 2px !important;
+    }
+    .header-sky a {
+        margin-right: 2px !important;
+    }
+   
+}
