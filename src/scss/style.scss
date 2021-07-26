@@ -6,26 +6,9 @@
     font-family: "Roboto";
 }
 
-// html {
-//     background-color: $cor;
-// }
-
-
- a{
-    text-decoration: none;
- }
-
-header {
-    background-color: $background-primary;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
-
 body {
     margin: 0;
 }
-
-
 
 @import 'header';
 @import 'home';
