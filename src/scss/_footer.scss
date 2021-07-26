@@ -9,6 +9,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: $background-primary;
+    margin-top: 20px;
     a, h3,  .font-special-block-1,  .font-special-block-2, .primer-block {
         color: $text-primary;
         font-size: 13px;
@@ -305,6 +306,7 @@ footer {
     color: $text-secondary;
     font-size: 1rem;
     padding-top: 12px;
+    margin-bottom: 20px;
 }
 
 // RESPONSIVIDADE
