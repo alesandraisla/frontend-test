@@ -6,18 +6,15 @@ var sass = require('gulp-sass')(require('sass'));
 var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 
-// task js-npm para node_modules pegar boooot, jquer, poppder, slider
 
-// task js copiar arq .js
 gulp.task('js', gulp.series( function() {
     return gulp.src([
         'src/js/*.js',
-    ]) //ler 
+    ]) 
     .pipe(gulp.dest('dist/js'))
-    .pipe(browserSync.stream()); // gravar 
+    .pipe(browserSync.stream()); 
 }));
 
-// jquery , bootstrap, slick 
 gulp.task('vendor-js', gulp.series( function() {
     return gulp.src([
         './node_modules/@fortawesome/awesome/js/fontawesome.js',
@@ -26,12 +23,12 @@ gulp.task('vendor-js', gulp.series( function() {
         './node_modules/slick-carousel/slick/slick.js',
     ]) 
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('dist/js')); // gravar 
+    .pipe(gulp.dest('dist/js')); 
 }));
 
 gulp.task('html', gulp.series( function() {
-    return gulp.src(['src/index.html']) //ler 
-    .pipe(gulp.dest('dist')); // gravar 
+    return gulp.src(['src/index.html']) 
+    .pipe(gulp.dest('dist')); 
 }));
 
 gulp.task('images', gulp.series( function() {
@@ -49,9 +46,6 @@ gulp.task('fonts-awesome', gulp.series( function() {
     .pipe(gulp.dest('dist/webfonts'));
 }))
 
-
-
-
 gulp.task('sass', gulp.series( function() {
     return gulp.src([
         'node_modules/bootstrap/scss/*.scss',
@@ -59,15 +53,13 @@ gulp.task('sass', gulp.series( function() {
         'node_modules/slick-carousel/slick/slick.scss',
         'node_modules/slick-carousel/slick/slick-theme.scss',
         'src/scss/*.scss',
-    ]) //ler 
-    .pipe(sass()) // converter o Sass em CSS
+    ]) 
+    .pipe(sass()) 
     .pipe(concat('style.css'))
     .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.stream()); // gravar 
+    .pipe(browserSync.stream()); 
 }));
 
-
-// copiar index,img
 
 // Static server
 gulp.task('serve', gulp.series('sass', 'vendor-js', 'js', 'html', 'images', 'fonts', 'fonts-awesome', function() {
